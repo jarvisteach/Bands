@@ -19,6 +19,7 @@ namespace BandExplorer
             String deleteCommand = "DELETE FROM Customers WHERE CustomerID = @CustomerID";
 
             adapter = new SqlDataAdapter(new SqlCommand(selectCommand, con));
+
             adapter.MissingSchemaAction = MissingSchemaAction.AddWithKey;
 
             // Create the other commands.
